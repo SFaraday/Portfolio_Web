@@ -17,8 +17,8 @@
     </header>
     <main class="max-w-4xl mx-auto p-8">
         <section id="hero" class="py-20 text-center">
-            <h1 class="text-5xl font-bold mb-4">¡Hola!, soy Samuel A. Matamoros</h1>
-            <p class="text-xl text-slate-400">Desarrollador Full Stack & Android entusiasta de la optimización.</p>
+            <h1 class="text-5xl font-bold mb-4">¡Hola!, soy Samuel <span id="typing-name" class="text-400 bg-gradient-to-r from-slate-400 via-blue-500 to-slate-400 bg-clip-text text-transparent animate-pulse"> A. </span> Matamoros</h1>
+            <p class="text-xl font-medium bg-gradient-to-r from-slate-400 via-blue-500 to-slate-400 bg-clip-text text-transparent animate-pulse"> Desarrolador Full Stack | Android | Soporte Técnico </p>
         </section>
         
         <section id="Projects">
@@ -30,8 +30,9 @@
                     <span class="bg-slate-700 px-3 py-1 rounded-full text-xs text-blue-200 font-semibold"> Kotlin </span>
                     <span class="bg-slate-700 px-3 py-1 rounded-full text-xs text-blue-200"> Java </span>
                     <span class="bg-slate-700 px-3 py-1 rounded-full text-xs text-blue-200"> C++ </span>
-                    <span class="bg-slate-700 px-3 py-1 rounded-full text-xs text-blue-200"> Android SDK </span>
+                    <span class="bg-slate-700 px-3 py-1 rounded-full text-xs text-blue-200"> Android SDK </span>                  
                 </div>
+                <button onclick="openModal('Stellar-modal')" class="mt-4 flex items-center gap-2 text-blue-400 hover:text-white transition"> <span class="text-2xl">+</span> Ver detalles y GitHub </button>
             </article>
             <article class="bg-slate-800 p-6 rounded-xl border border-slate-700 shadow-md transition-all duration-300 ease-out hover:-translate-y-2 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-500/10 mb-6 ">
                 <h3 class="text-xl font-bold text-blue-400">Proyecto Futuro </h3>
@@ -39,6 +40,7 @@
                 <div class="flex gap-2 mt-4">
                     <span class="bg-slate-700 px-3 py-1 rounded-full text-xs text-blue-200"> Tecnologias</span>
                 </div>
+                <button onclick="openModal('project2-modal')" class="mt-4 flex items-center gap-2 text-blue-400 hover:text-white transition"> <span class="text-2xl">+</span> Ver detalles y GitHub </button>
             </article>
             <article  class="bg-slate-800 p-6 rounded-xl border border-slate-700 shadow-md transition-all duration-300 ease-out hover:-translate-y-2 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-500/10 mb-6 ">
                 <h3 class="text-xl font-bold text-blue-400">Proyecto Futuro </h3>
@@ -46,6 +48,7 @@
                 <div class="flex gap-2 mt-4"> 
                     <span class="bg-slate-700 px-3 py-1 rounded-full text-xs text-blue-200"> Tecnologias</span>
                 </div>
+                <button onclick="openModal('project3-modal')" class="mt-4 flex items-center gap-2 text-blue-400 hover:text-white transition"> <span class="text-2xl">+</span> Ver detalles y GitHub </button>
             </article>        
         </section>
         <section id="Sobre mí" class="py-20 border-t border-slate-700">
@@ -94,7 +97,7 @@
         <div class="max-w-4xl mx-auto p-12 text-center">
             <h2 class="text-3xl font-bold text-blue-400 mb-4"> ¿Hablamos? </h2>
             <p class="text-slate-400 mb-8 max-w-md mx-auto">
-                Actualmente estoy abierto a nuevas oportunidades laborales, remotos y presenciales, y colaboraciones en proyectos de **Android o Web**. ¡Escríbeme!
+                Actualmente estoy abierto a nuevas oportunidades laborales, remotas y presenciales, y colaboraciones en proyectos de **Android o Web**. ¡Escríbeme!
             </p>
 
             <div class="flex flex-wrap justify-center gap-4 mb-12">
@@ -114,5 +117,117 @@
             </div>
         </div>
     </footer>
+
+    <!-- MODAL -->
+     <div id="Stellar-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+        <div class="bg-slate-900 border border-slate-700 max-w-2xl w-full rounded-2xl p-8 shadow-2xl overflow-y-auto max-h-[90vh]">  
+            <div class="flex justify-between items-start mb-6">
+                <h2 class="text-3xl font-bold text-blue-400"> Stellar Browser</h2>
+                <button onclick="closeModal('Stellar-modal')" class="text-slate-400 hover:text-white text-2xl"> &times; </button>
+            </div>
+
+            <div class="space-y-4 text-slate-300">  
+                <p> Un navegador web experimental basado en el motor de Chromium, diseñado para ofrecer una experiencia de usuario rápida, segura y personalizable. </p>
+                <h4 class="font-bold text-white"> Detalles Técnicos</h4>
+                <ul class="list-disc ml-5 space-y-2">
+                    <li> Integración de motor Chromium </li>
+                    <li> Interfaz personalizada en Android Studio </li>
+                    <li> Enfoque en la reducción del cosumo de recursos y velocidad </li>
+                </ul>
+
+                <div class="pt-6">
+                    <a href="https://github.com/Sfaraday" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 py-2 px-6 rounded-lg transition"> Ver código en GitHub </a>
+                </div>
+            </div>
+        </div>
+     </div>
+
+      <div id="project2-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+        <div class="bg-slate-900 border border-slate-700 max-w-2xl w-full rounded-2xl p-8 shadow-2xl overflow-y-auto max-h-[90vh]"> 
+            <div class="flex justify-between items-start mb-6">
+                <h2 class="text-3xl font-bold text-blue-400"> Proyecto 2</h2>
+                <button onclick="closeModal('project2-modal')" class="text-slate-400 hover:text-white text-2xl"> &times; </button>
+            </div>
+
+            <div class="space-y-4 text-slate-300"> 
+                <p> Descripción del proyecto 2 </p>
+                <h4 class="font-bold text-white"> Detalles Técnicos</h4>
+                <ul class="list-disc ml-5 space-y-2">
+                    <li> Descripción del proyecto 2 </li>
+                    <li> Descripción del proyecto 2 </li>
+                    <li> Descripción del proyecto 2 </li>
+                </ul>
+
+                <div class="pt-6">
+                    <a href="https://github.com/Sfaraday" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 py-2 px-6 rounded-lg transition"> Ver código en GitHub </a>
+                </div>
+            </div>
+        </div>
+     </div>
+
+      <div id="project3-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+        <div class="bg-slate-900 border border-slate-700 max-w-2xl w-full rounded-2xl p-8 shadow-2xl overflow-y-auto max-h-[90vh]"> 
+            <div class="flex justify-between items-start mb-6">
+                <h2 class="text-3xl font-bold text-blue-400"> Proyecto 3</h2>
+                <button onclick="closeModal('project3-modal')" class="text-slate-400 hover:text-white text-2xl"> &times; </button>
+            </div>
+
+            <div class="space-y-4 text-slate-300"> 
+                <p> Descripción del proyecto 3 </p>
+                <h4 class="font-bold text-white"> Detalles Técnicos</h4>
+                <ul class="list-disc ml-5 space-y-2">
+                    <li> Descripción del proyecto 3 </li>
+                    <li> Descripción del proyecto 3 </li>
+                    <li> Descripción del proyecto 3 </li>
+                </ul>
+
+                <div class="pt-6">
+                    <a href="https://github.com/Sfaraday" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 py-2 px-6 rounded-lg transition"> Ver código en GitHub </a>
+                </div>
+            </div>
+        </div>
+     </div>
+
+    <script>
+        window.addEventListener('load', ()=>{
+    const nameElement= document.getElementById('typing-name');
+    const fullName = " Alejandro ";
+    let i = 0
+    
+    //Simular escritura
+    function type () {
+        if(i < fullName.length) {
+            nameElement.innerHTML = fullName.substring(0, i+1);
+            i++;
+            setTimeout(type, 90);
+        } else {
+            setTimeout(backspace, 2000);
+        }
+    } 
+
+    //Borrado 
+    function backspace() {
+        if(i>0) {
+            nameElement.innerHTML = fullName.substring(0, i-1);
+            i--;
+            setTimeout(backspace, 60);
+        } else {
+            nameElement.innerHTML = "A. ";
+            i = 0;
+        }
+    }
+    setTimeout(type, 1000);
+})
+
+function openModal(id) {
+    document.getElementById(id).classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal(id) {
+    document.getElementById(id).classList.add('hidden');
+    document.body.style.overflow = 'auto';
+}
+    </script>
     </body>
 </html>
