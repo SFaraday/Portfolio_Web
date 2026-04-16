@@ -8,13 +8,39 @@
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     </head>
     <body class="bg-slate-900 text-white font-sans">       
-    <header class="p-6 bg-slate-800 shadow-md">
-        <ul class="flex justify-center gap-8">
-            <li><a href="#Projects" class="hover:text-blue-400 transition">Proyectos</a></li>
-            <li><a href="#Sobre mí" class="hover:text-blue-400 transition"> Sobre mí</a></li>
-            <li><a href="#Contact" class="hover:text-blue-400 transition">Contacto</a></li>
+    <header class="fixed w-full top-0 z-40 bg-slate-800/90 backdrop-blur-md shadow-lg">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-2 group cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            <div class="bg-blue-600 p-2 rounded-lg group-hover:bg-blue-500 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+            </div>
+        </div>
+
+        <ul class="hidden md:flex gap-8 items-center font-medium">
+            <li><a href="#about me" class="text-slate-300 hover:text-blue-400 transition">Sobre mí</a></li>
+            <li><a href="#Projects" class="text-slate-300 hover:text-blue-400 transition">Proyectos</a></li>
+            <li><a href="#Contact" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-full transition shadow-lg shadow-blue-900/20">Contacto</a></li>
         </ul>
+
+        <button id="menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none">
+            <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+    </nav>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-slate-800 border-t border-slate-700">
+        <ul class="flex flex-col p-6 gap-4">
+            <li><a href="#about me" class="block text-lg text-slate-300 hover:text-blue-400 py-2 mobile-link">Sobre mí</a></li>
+            <li><a href="#Projects" class="block text-lg text-slate-300 hover:text-blue-400 py-2 mobile-link">Proyectos</a></li>
+            <li><a href="#Contact" class="block text-lg text-blue-400 font-bold py-2 mobile-link">Contacto</a></li>
+        </ul>
+    </div>
     </header>
+
+<div class="h-20"></div>
     <main class="max-w-4xl mx-auto p-8">
         <section id="hero" class="py-20 text-center">
             <h1 class="text-5xl font-bold mb-4">¡Hola!, soy Samuel <span id="typing-name" class="text-400 bg-gradient-to-r from-slate-400 via-blue-500 to-slate-400 bg-clip-text text-transparent animate-pulse"> A. </span> Matamoros</h1>
@@ -29,7 +55,7 @@
                 <div class="flex gap-2 mt-4">
                     <span class="bg-slate-700 px-3 py-1 rounded-full text-xs text-blue-200 font-semibold"> Kotlin </span>
                     <span class="bg-slate-700 px-3 py-1 rounded-full text-xs text-blue-200"> Java </span>
-                    <span class="bg-slate-700 px-3 py-1 rounded-full text-xs text-blue-200"> C++ </span>
+                    <span class="bg-slate-700 px-3 py-1 rounded-full text-xs text-blue-200"> HTML/CSS</span> 
                     <span class="bg-slate-700 px-3 py-1 rounded-full text-xs text-blue-200"> Android SDK </span>                  
                 </div>
                 <button onclick="openModal('Stellar-modal')" class="mt-4 flex items-center gap-2 text-blue-400 hover:text-white transition"> <span class="text-2xl">+</span> Ver detalles y GitHub </button>
@@ -51,15 +77,15 @@
                 <button onclick="openModal('project3-modal')" class="mt-4 flex items-center gap-2 text-blue-400 hover:text-white transition"> <span class="text-2xl">+</span> Ver detalles y GitHub </button>
             </article>        
         </section>
-        <section id="Sobre mí" class="py-20 border-t border-slate-700">
+        <section id="about me" class="py-20 border-t border-slate-700">
          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div>
                  <h2 class="text-3xl font-semibold mb-6 text-blue-400"> Sobre mí </h2>
                  <p class="text-slate-300 mb-4 leading-relaxed"> 
-                    Soy un desarrollador **autodidacta** enfocado en el ecosistema **Full Stack y Android**. Me apasiona entender cómo funcionan las cosas desde la raíz, ya sea modificando firmwares de dispositivos Samsung o explorando el código fuente de Chromium para crear soluciones personalizadas.
+                    Soy un desarrollador universitario y autodidacta enfocado en el ecosistema Full Stack y Android. Me apasiona entender cómo funcionan las cosas desde la raíz, ya sea modificando firmwares de dispositivos android o explorando el código fuente de Chromium para crear soluciones personalizadas.
                  </p>
                  <p class="text-slate-300 mb-6 leading-relaxed">
-                    Actualmente, divido mi tiempo entre perfeccionar mi dominio de **React, Node.js y PL/SQL** y avanzar en mi nivel de inglés para colaborar en entornos globales. Cuando no estoy programando, me encontrarás estudiando economía o planeando mi próxima ruta en motocicleta por los paisajes de Honduras.
+                    Actualmente, divido mi tiempo entre perfeccionar mi dominio de React, Node.js y PL/SQL, avanzar en mi nivel de inglés y en mis estudios universitarios. Cuando no estoy programando, me gusta aprender de cosas variadas, como economía o cocina.
                  </p>
                  <div class="flex flex-wrap gap-3"> 
                     <span class="border border-blue-500 bg-blue-500/10 px-4 py-2 rounded-lg text-sm text-blue-300">Resolución de problemas</span>
@@ -97,7 +123,7 @@
         <div class="max-w-4xl mx-auto p-12 text-center">
             <h2 class="text-3xl font-bold text-blue-400 mb-4"> ¿Hablamos? </h2>
             <p class="text-slate-400 mb-8 max-w-md mx-auto">
-                Actualmente estoy abierto a nuevas oportunidades laborales, remotas y presenciales, y colaboraciones en proyectos de **Android o Web**. ¡Escríbeme!
+                Actualmente estoy abierto a nuevas oportunidades laborales, remotas y presenciales, y colaboraciones en proyectos Android o Web. ¡Escríbeme!
             </p>
 
             <div class="flex flex-wrap justify-center gap-4 mb-12">
@@ -228,6 +254,35 @@ function closeModal(id) {
     document.getElementById(id).classList.add('hidden');
     document.body.style.overflow = 'auto';
 }
+
+//Menú
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const menuIcon = document.getElementById('menu-icon');
+const mobileLinks = document.querySelectorAll('.mobile-link');
+
+function resetIcon() {
+    menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>';
+}
+
+//Abrir y cerrar
+menuBtn.addEventListener('click', ()=> {
+    const isHidden = mobileMenu.classList.toggle('hidden');
+    if(isHidden) {
+        resetIcon();
+    } else {
+        menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>';
+    }
+    
+});
+
+mobileLinks.forEach(link => {
+    link.addEventListener('click', ()=> {
+        mobileMenu.classList.add('hidden');
+        resetIcon();
+    });
+});
+
     </script>
     </body>
 </html>
